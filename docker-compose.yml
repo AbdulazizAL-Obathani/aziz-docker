@@ -1,6 +1,23 @@
 version: '3.8'
 
 services:
+  app:
+    build: .
+    ports:
+      - "4800:4800"
+    environment:
+      PORT: 4800
+      NODE_ENV: development
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: test
+      DB_PASSWORD: 123
+      DB_NAME: mydatabase
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    depends_on:
+      - postgres
+      - redis
   mongo:
     image: mongo:latest
     container_name: mongo
