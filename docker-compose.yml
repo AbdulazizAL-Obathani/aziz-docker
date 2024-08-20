@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     container_name: express-node-app
-    image: AbdulazizAL-Obathani/aziz-docker
+    image: abdulazizalobathani/aziz-docker
     build: .
     ports:
       - "4800:4800"
