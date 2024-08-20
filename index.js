@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
         } else if (reply) {
             res.send(`<h1>${reply}</h1>`);
         } else {
-            const message = 'Hello, World! devops';
+            const message = 'Hello, World! from server using docker hup';
             redisClient.set('welcome_message', message);
             res.send(`<h1>${message}</h1>`);
         }
